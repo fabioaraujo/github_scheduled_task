@@ -1,9 +1,8 @@
 name: github scheduled action
 
 on:
-  workflow_dispatch: 
   schedule:
-    - cron: '15 * * * *' # runs every hour at 15 minutes
+    - cron: '15 0/6 * * *' # runs every 6 hour at 15 minutes, starting at mid-night
 
 jobs:
   build:
